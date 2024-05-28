@@ -11,22 +11,36 @@ const contentStyle = {
 };
 
 export const ImageCarousel = ({ images }) => (
-  <Carousel effect="scrollx">
+  <Carousel effect="scrollx" autoplay>
     <div>
-      <img src={images[0]} alt="image1" style={contentStyle} />
-      <p className="para">Welcome to Jingle Holiday Bazar Pvt Ltd.</p>
-      <p>The Badrinath</p>
-      <button className="btns">contact</button>
+      <div className="carousel-box" style={{ backgroundImage: `url(${images[0]})` }} >
+        <div className="details-box">
+            <h1>Welcome to Jingle Holiday Bazar Pvt Ltd.</h1>
+            <p>The Badrinath</p>
+            <br />
+            <button className="btns">Contact</button>
+        </div>
+      </div>
     </div>
     <div>
-      <img src={images[1]} alt="image1" style={contentStyle} />
-      <p className="para">Welcome to Jingle Holiday Bazar Pvt Ltd.</p>
-      <button className="btns">contact</button>
+      <div className="carousel-box" style={{ backgroundImage: `url(${images[1]})` }} >
+        <div className="details-box">
+            <h1>Welcome to Jingle Holiday Bazar Pvt Ltd.</h1>
+            <p>Rameshwaram</p>
+            <br />
+            <button className="btns">Contact</button>
+        </div>
+      </div>
     </div>
     <div>
-      <img src={images[2]} alt="image1" style={contentStyle} />
-      <p className="para">Welcome to Jingle Holiday Bazar Pvt Ltd.</p>
-      <button className="btns">contact</button>
+      <div className="carousel-box" style={{ backgroundImage: `url(${images[2]})` }} >
+        <div className="details-box">
+            <h1>Welcome to Jingle Holiday Bazar Pvt Ltd.</h1>
+            <p>The Pink City of Jaipur</p>
+            <br />
+            <button className="btns">Contact</button>
+        </div>
+      </div>
     </div>
   </Carousel>
 );
