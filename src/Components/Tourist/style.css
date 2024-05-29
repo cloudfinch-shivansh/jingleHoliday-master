@@ -1,4 +1,5 @@
-.container{
+/* Container styles */
+.container {
     display: flex;
     flex-flow: row;
     width: 95%;
@@ -11,64 +12,81 @@
     font-style: italic;
 }
 
-.first-container{
+/* First container */
+.first-container {
     flex-basis: 48%;
     height: 800px;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: space-between;
+    animation: fadeInDown 1s ease-in-out;
 }
-.first-container img{
+
+.first-container img {
     height: 50%;
     width: 100%;
     object-fit: cover;
 }
-.first-container div , .second-first div, .second-last div{
+
+.first-container div,
+.second-first div,
+.second-last div {
     height: 48%;
     display: flex;
     flex-flow: column;
     align-items: center;
     font-size: 1.5rem;
     justify-content: space-around;
-    
+    animation: fadeIn 1s ease-in-out;
 }
 
-.second-first div, .second-last div{
-    height: 100%;
-    margin-left: 5px;
-}
-.first-container div a , .second-first div a, .second-last div a{
+.first-container div a,
+.second-first div a,
+.second-last div a {
     color: #007BFF;
     text-decoration: none;
     font-size: 1.75rem;
+    transition: color 0.3s ease-in-out;
 }
 
-.second-container{
+.first-container div a:hover,
+.second-first div a:hover,
+.second-last div a:hover {
+    color: #0056b3;
+}
+
+/* Second container */
+.second-container {
     display: flex;
     flex-flow: column;
     flex-basis: 48%;
     height: 800px;
     justify-content: space-between;
     gap: 5px;
+    animation: fadeInUp 1s ease-in-out;
 }
-.second-first{
+
+.second-first {
     display: flex;
     flex-flow: row;
     flex-basis: 50%;
     width: 100%;
 }
-.second-first img{
+
+.second-first img {
     width: 50%;
     height: 100%;
     object-fit: cover;
 }
-.second-last{
+
+.second-last {
     display: flex;
     flex-flow: row;
     flex-basis: 50%;
 }
-.second-last img{
+
+.second-last img {
     width: 50%;
     height: 100%;
     object-fit: cover;
@@ -77,4 +95,37 @@
 .link-last {
     font-size: 20px !important;
     font-style: italic;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

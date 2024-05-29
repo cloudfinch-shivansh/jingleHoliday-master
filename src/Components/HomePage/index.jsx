@@ -1,8 +1,15 @@
 import React from "react";
 import { Navbar } from "../Navbar";
-import img1 from "../../assets/1.jpeg";
-import img2 from "../../assets/2.jpg";
-import img3 from "../../assets/3.jpg";
+import img1 from "../../assets/Badrinath.jpeg";
+import img2 from "../../assets/Rameshwaram.jpg";
+import img3 from "../../assets/Jaipur.jpg";
+import img4 from "../../assets/Rajasthan.webp";  
+import img5 from "../../assets/Pondicherry1.jpg";
+import img6 from "../../assets/HimalayasMountainRangeInAsia.webp";
+import img7 from "../../assets/NewDelhiNCR.jpg";
+import img8 from "../../assets/GoechalaSikkim.jpg";
+import img9 from "../../assets/DarjeelingWestBengal.jpg";
+
 import { ImageCarousel } from "../Carousel";
 import "./style.css";
 import { BoxModal1 } from "../Box-modal";
@@ -22,9 +29,10 @@ import solang from '../../assets/Solang-Valley.jpg';
 import beach from '../../assets/beach.jpg';
 import { Tourist } from "../Tourist";
 import Footer from "../Footer";
+import EmailSidebar from "../EmailSidebar/EmailSidebar";
 
 export const HomePage = () => {
-  const images = [img1, img2, img3];
+  const images = [img1, img2, img3,img4,img5,img6,img7,img8,img9];
 
   const details = [
     {
@@ -108,6 +116,9 @@ export const HomePage = () => {
   ]
   return (
     <>
+    <div className="gmail-box">
+
+    </div>
       <Navbar />
       <ImageCarousel images={images} interval={4000} />
       <section className="sec1">

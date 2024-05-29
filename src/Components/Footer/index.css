@@ -1,64 +1,244 @@
-.footer{
-    background-color:#5c9de4;;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Footer styles */
+/* Footer styles */
+.footer {
+    background-color: #68d8d6;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    padding: 100px;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+    gap: 40px; /* Reduced gap between columns */
+    padding: 49px;
     font-size: 20px;
-    
-    
- }
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'Poppins', sans-serif; /* Updated font family */
+}
 
- .footer h2{
-    color: black;
+
+/* Footer section titles */
+.footer h2 {
+    color: #2b2b2b; /* Darker text color */
     margin: 10px 0px;
- }
+    animation: slideInLeft 1s ease-in-out;
+    font-size: 28px; /* Increased font size */
+    font-weight: 600; /* Bold font weight */
+    text-align: center;
+}
 
- .footer > div{
+/* Footer section items */
+.footer .grid-item {
     display: flex;
-    flex-flow: column wrap;
+    flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 15px; /* Increased gap between items */
+    animation: fadeInUp 1s ease-in-out, shake 1.5s infinite; /* Advanced animation added */
+}
 
- }
-
- .footer > div > a{
-    color: black;
+/* Footer links */
+.footer .grid-item a {
+    color: #2b2b2b; /* Darker text color */
     text-decoration: none;
- }
+    animation: fadeIn 1.5s ease-in-out;
+}
 
- 
- .footer button{
-    height: 30px;
-    width: 90px;
-    background-color: rgb(2, 245, 63);
-    box-shadow: 0px 0px 20px 2px #527497;
- }
+/* Footer buttons */
+.footer button {
+    height: 40px; /* Increased button height */
+    width: 120px; /* Increased button width */
+    background-color: #ff6b6b; /* Red button color */
+    border: none; /* Removed border */
+    border-radius: 20px; /* Rounded button corners */
+    box-shadow: 0px 0px 20px 2px #ff6b6b; /* Updated box shadow */
+    animation: bounce 2s infinite, buttonGlow 3s infinite;
+    font-family: 'Poppins', sans-serif; /* Updated font family */
+}
 
- .footer button:hover{
-    
-    background-color:green;
- }
+.footer button:hover {
+    background-color: #ffffff; /* White button background on hover */
+    color: #ff6b6b; /* Red button text on hover */
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
-/* .store-container{
-    gap: 20px;
-} */
+/* Hover effect on footer links */
+.footer a {
+    font-weight: 400; /* Normal font weight */
+}
 
- .footer a{
-    font-weight: 300px;
- }
+.footer a:hover {
+    font-weight: 600; /* Bold font weight on hover */
+    transition: font-weight 0.3s ease-in-out;
+}
 
- .footer a:hover{
-    font-weight: bold;
- }
+/* Animation for social media icons */
+.grid-item.social-media .fa-icon {
+    animation: iconBounce 2s infinite;
+}
 
- 
+.icons a {
+    margin-right: 15px;
+    color: #2b2b2b; /* Darker text color */
+}
 
- /* @media only screen and (width<=800px){
-    .footer{
-        
-        display: flex;
-        flex-direction: column;
-        
-        justify-content: center;
+.icons a:hover .fa-icon {
+    color: #ff6b6b; /* Red icon color on hover */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
- } */
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes iconBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Powered by text */
+.powered-by {
+    grid-column: span 5;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: fadeInMoveDown 2s ease-in-out, colorChange 5s infinite, rotateScale 2s ease-in-out;
+    font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+/* Initial animation to fade in and move down */
+@keyframes fadeInMoveDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+     100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Additional animation to change text color */
+@keyframes colorChange {
+    0%, 100% {
+        color: #2b2b2b; /* Darker text color */
+    }
+    25% {
+        color: #ffffff; /* White text color */
+    }
+    50% {
+        color: #68d8d6; /* Blue text color */
+    }
+    75% {
+        color: #ffd166; /* Yellow text color */
+    }
+}
+
+/* Additional animation to rotate and scale the text */
+@keyframes rotateScale {
+    0% {
+        transform: rotate(0deg) scale(1);
+    }
+    50% {
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(360deg) scale(1);
+    }
+}
+
+/* Additional Styles for Animated Section Boxes */
+.footer .animated-section {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out, boxPulse 3s infinite;
+    font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+/* Keyframes for section box animations */
+@keyframes boxPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+/* Additional Styles for Animated Section Boxes */
+.animated-section {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 8px; /* Reduced border radius */
+    padding: 15px; /* Reduced padding */
+    text-align: center;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease-in-out, boxPulse 3s infinite;
+    font-family: 'Poppins', sans-serif; /* Updated font family */
+}
+
+/* Keyframes for section box animations */
+@keyframes boxPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03); /* Adjusted scale */
+    }
+}

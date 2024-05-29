@@ -1,39 +1,107 @@
-.box{
+/* Updated styles with animations */
+
+/* Box styles */
+.box {
     border: 2px solid rgb(230, 220, 220);
     height: fit-content;
     padding: 1.25rem;
     border-radius: 5px;
-    box-shadow: 0 0 10px 4px rgba(230, 220, 220,0.5);
+    box-shadow: 0 0 10px 4px rgba(230, 220, 220, 0.5);
     text-align: center;
+    animation: fadeIn 1s ease-in-out;
 }
-.box h5{
-    font-size: 1.25rem;
+
+/* Title style */
+.box h5 {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    animation: slideInUp 1s ease-in-out;
+}
+
+/* Subtitle style */
+.box h6 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
     font-weight: 500;
     line-height: 1.2;
-    margin-bottom: .75rem;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    animation: slideInUp 1s ease-in-out;
 }
-.box h6{
-    font-size: 1rem;
-    margin-bottom: .75rem;
-    font-weight: 500;
-    line-height: 1.2;
-}
-.box p{
+
+/* Description style */
+.box p {
     margin-bottom: 1rem;
-    font-size: 14px;
+    font-size: 1.2rem;
+    font-family: 'Open Sans', sans-serif; /* Use Open Sans font */
+    animation: fadeIn 1s ease-in-out;
 }
+
+/* Icon styles */
 .MuiSvgIcon-root {
     font-size: 45px !important;
     color: green;
     margin: 10px;
+    transition: all 0.3s ease-in-out;
+    animation: rotateIcon 1s infinite linear;
 }
-.MuiSvgIcon-root:hover{
+
+/* Icon hover effect */
+.MuiSvgIcon-root:hover {
     color: #bee99f;
     font-size: 55px !important;
 }
-.btn{
+
+/* Button styles */
+.btn {
     height: 55px;
     font-size: 1.4rem;
     border-radius: 5px;
     padding: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
 }
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Keyframes for animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+    
